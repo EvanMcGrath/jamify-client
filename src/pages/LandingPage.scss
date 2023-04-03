@@ -1,0 +1,28 @@
+@use '../styles/partials/variables' as *;
+
+
+.landing {
+
+
+
+    &__header {
+
+    color: $purple;
+    font-weight: 600;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    // background-color: $black;
+    // text-shadow: 5px 5px 0 $yellow;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed; 
+        bottom: 0;
+        right: 0;
+    }
+}
