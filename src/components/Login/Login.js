@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Login.scss'
 
 
 const Login = () => {
 
     return (
-        <Link className="login-button" to='http://localhost:3100/login' >Login</Link>
+        <div className="login">
+            <Link className="login__button" to='http://localhost:3100/login' >Login</Link>
+
+        </div>
     )
 }
 

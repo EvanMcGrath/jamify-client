@@ -1,0 +1,13 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.login {
+
+    margin: 0 auto; 
+    width: 50%;
+    text-align: center;
+
+    &__button {
+        background-color: $purple;
+    }
+}
