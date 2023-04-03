@@ -1,9 +1,13 @@
+import Login from '../components/Login/Login'
+import Dashboard from '../components/Dashboard/Dashboard'
 
-
-const LandingPage = () => {
+const LandingPage = ({ code }) => {
 
     return (
-        <div>Hiya.</div>
+        <>
+            {code ? <Dashboard code={code} /> : <Login />}
+            <div>Hiya.</div>
+        </>
     )
 }
 

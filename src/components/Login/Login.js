@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
 
     return (
-        <a href='http://localhost:3100/login' >Login</a>
+        <Link className="login-button" to='http://localhost:3100/login' >Login</Link>
     )
 }
 
