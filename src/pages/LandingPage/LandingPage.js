@@ -1,13 +1,12 @@
 import './LandingPage.scss'
-import Login from '../components/Login/Login'
-import Dashboard from '../components/Dashboard/Dashboard'
+import Login from '../../components/Login/Login'
 
-const LandingPage = ({ code }) => {
+const LandingPage = () => {
 
     return (
         <main className="landing">
             <header className="landing__header">Jamify</header>
-            {code ? <Dashboard code={code} /> : <Login />}
+                <Login />
             <footer className="landing__footer">
                 <div>Logo</div>
             </footer>

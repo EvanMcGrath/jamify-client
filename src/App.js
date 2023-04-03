@@ -1,6 +1,5 @@
-import Login from './components/Login/Login'
-import Dashboard from './components/Dashboard/Dashboard'
-import LandingPage from './pages/LandingPage';
+import PlaylistMenu from './pages/PlaylistMenu/PlaylistMenu';
+import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={ <LandingPage code={code} /> }/>
+          <Route path="/" element={ code ? <PlaylistMenu code={code} /> : <LandingPage /> }/>
         </Routes>
       </div>
     </BrowserRouter>
