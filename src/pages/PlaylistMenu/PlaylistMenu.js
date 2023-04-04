@@ -1,19 +1,20 @@
 import Dashboard from '../../components/Dashboard/Dashboard'
 import './PlaylistMenu.scss'
+import { useState } from 'react'
 
 const PlaylistMenu = ({ code }) => {
 
-
+    const [myInfo, setMyInfo] = useState();
 
     return (
         <>
             <header className="menu-header"> 
                 <h1 className="menu-header__title">
-                    Playlists
+                    { myInfo ? myInfo.display_name : null}'s playlists
                 </h1>
                 <div className="menu-header__logo">Logo</div>
             </header>
-            <Dashboard code={code} />
+            <Dashboard code={code} setMyInfo={setMyInfo} />
         </>
     )
 }
