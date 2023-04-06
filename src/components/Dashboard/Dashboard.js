@@ -16,21 +16,12 @@ const Dashboard = ({ code, setMyInfo }) => {
 
         axios.post('http://localhost:3100/userInfo/me', { "access_token": accessToken })
             .then((res) => {
-                setMyInfo(res.data.body)
-                // setPlaylists()
+                setMyInfo(res.data[0].username)
+                setPlaylists(res.data[0].playlists)
             })
             .catch((err) => {
                 console.log(err)
             });
-
-        // axios.post('http://localhost:3100/userInfo/playlists', { "access_token": accessToken })
-        //     .then((res) => {
-        //         console.log(res.data.items)
-        //         setPlaylists(res.data.items)
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
 
     }, [accessToken])
 
@@ -41,9 +32,9 @@ const Dashboard = ({ code, setMyInfo }) => {
             <ul className="playlist-list">
                 {playlists ? playlists.map((list) => {
                     return <>
-                        <li className="playlist-list__item" key={key++}>{list.name}</li>
+                        <li className="playlist-list__item" key={key++}>{list.playlistName}</li>
                         < br />
-                        {list.tracks.href}
+                        {list.playlistUri}
                         < br />
                     </>
                     }) : null }
