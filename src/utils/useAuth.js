@@ -7,11 +7,11 @@ const useAuth = (code) => {
     const [refreshToken, setRefreshToken] = useState('')
     const [expiresIn, setExpiresIn] = useState('')
 
+
     useEffect(() => {
 
-        axios.post( "http://localhost:3100/callback", { code })
+        axios.post( "http://localhost:3100/login/callback", { code })
             .then((res) => {
-                console.log(res.data)
                 setAccessToken( res.data.accessToken )
                 setRefreshToken( res.data.refreshToken )
                 setExpiresIn( res.data.expiresIn )
@@ -19,8 +19,8 @@ const useAuth = (code) => {
             })
             .catch((err) => {
                 console.log("Error: ", err)
-                // window.location = '/'
             })
+
     }, [code])
 
 
@@ -29,7 +29,7 @@ const useAuth = (code) => {
         if ( !refreshToken || !expiresIn ) return
         
         const interval = setInterval(() => {
-            axios.post( "http://localhost:3100/refresh", { refreshToken })
+            axios.post( "http://localhost:3100/login/refresh", { refreshToken })
             .then((res) => {
                 console.log(res)
                 setAccessToken( res.data.accessToken )

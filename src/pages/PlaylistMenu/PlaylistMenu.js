@@ -10,7 +10,7 @@ const PlaylistMenu = ({ code }) => {
         <>
             <header className="menu-header"> 
                 <h1 className="menu-header__title">
-                    { myInfo ? myInfo.display_name : null}'s playlists
+                    { myInfo ? myInfo.display_name + "'s " : null}playlists
                 </h1>
                 <div className="menu-header__logo">Logo</div>
             </header>
