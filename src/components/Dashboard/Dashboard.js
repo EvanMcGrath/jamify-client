@@ -45,11 +45,6 @@ const Dashboard = ({ code, setMyInfo }) => {
                 uris={['spotify:playlist:37i9dQZF1DZ06evO1DHoaY']}
             />;
 
-            {/* <div>{code}</div>
-            <br /> 
-            <br /> 
-            <br /> */}
-            {/* <div>{accessToken ? accessToken : "null"}</div>  */}
         </>
     )
 }
