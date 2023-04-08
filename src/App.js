@@ -1,4 +1,4 @@
-import PlaylistMenu from './pages/PlaylistMenu/PlaylistMenu';
+import MainMenu from './pages/MainMenu/MainMenu';
 import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={ code ? <PlaylistMenu code={code} /> : <LandingPage /> }/>
+          <Route path="/" element={ code ? <MainMenu code={code} /> : <LandingPage /> }/>
         </Routes>
       </div>
     </BrowserRouter>
