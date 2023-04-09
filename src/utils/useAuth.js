@@ -15,7 +15,7 @@ const useAuth = (code) => {
                 setAccessToken( res.data.accessToken )
                 setRefreshToken( res.data.refreshToken )
                 setExpiresIn( res.data.expiresIn )
-                window.history.pushState({}, null, '/')
+                // window.history.pushState({}, null, '/')
             })
             .catch((err) => {
                 console.log("Error: ", err)
@@ -34,7 +34,7 @@ const useAuth = (code) => {
                 console.log(res)
                 setAccessToken( res.data.accessToken )
                 setExpiresIn( res.data.expiresIn )
-                window.history.pushState({}, null, '/')
+                // window.history.pushState({}, null, '/')
             })
             .catch((err) => {
                 console.log("Error: ", err)

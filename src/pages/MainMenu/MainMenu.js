@@ -1,6 +1,8 @@
 import Dashboard from '../../components/Dashboard/Dashboard'
+import useAuth from '../../utils/useAuth'
 import './MainMenu.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import PlaylistMenu from '../../components/PlaylistMenu/PlaylistMenu'
 
 const MainMenu = ({ code }) => {
@@ -8,6 +10,8 @@ const MainMenu = ({ code }) => {
     const [myInfo, setMyInfo] = useState();
     const [playlists, setPlaylists] = useState();
 
+
+    
 
     return (
         <>
