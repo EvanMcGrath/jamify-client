@@ -3,15 +3,17 @@ import './PlaylistMenu.scss'
 import { useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { accessToken } from '../../utils/spotify'
 import gradient from 'random-gradient'
 
 const PlaylistMenu = ({ playlists }) => {
     
     let key = 0
 
-    console.log(playlists)
+    // console.log(playlists)
     
     return (
+        <>
         <ul className="playlist-list">
             { playlists ? playlists.map((list) => {
                 const bgGradient = {background: gradient(`${Math.random()}`)}
@@ -22,6 +24,7 @@ const PlaylistMenu = ({ playlists }) => {
                 </>
             }) : null}
         </ul>
+        </>
     )
 }
 

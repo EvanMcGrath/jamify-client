@@ -1,16 +1,36 @@
 import Dashboard from '../../components/Dashboard/Dashboard'
-import useAuth from '../../utils/useAuth'
+import { accessToken } from '../../utils/spotify'
 import './MainMenu.scss'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import PlaylistMenu from '../../components/PlaylistMenu/PlaylistMenu'
 
-const MainMenu = ({ code }) => {
+const MainMenu = () => {
 
     const [myInfo, setMyInfo] = useState();
     const [playlists, setPlaylists] = useState();
 
+    console.log(accessToken)
+    useEffect(() => {
+        // if (!accessToken) return
+        axios.post('http://localhost:3100/userInfo/me', { "accessToken": accessToken })
+            .then((res) => {
+                setMyInfo(res.data[0].username)
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+    }, [accessToken])
 
+    useEffect(() => {
+        axios.post('http://localhost:3100/playlist', { "accessToken": accessToken })
+            .then((res) => {
+                setPlaylists(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+    }, [myInfo])
     
 
     return (
@@ -24,7 +44,7 @@ const MainMenu = ({ code }) => {
             
             <PlaylistMenu playlists={playlists} />
 
-            <Dashboard code={code} setMyInfo={setMyInfo} setPlaylists={setPlaylists} />
+            {/* <Dashboard setMyInfo={setMyInfo} setPlaylists={b} /> */}
         </>
     )
 }
