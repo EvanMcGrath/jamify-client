@@ -10,7 +10,7 @@ const MainMenu = () => {
     const [myInfo, setMyInfo] = useState();
     const [playlists, setPlaylists] = useState();
 
-    console.log(accessToken)
+
     useEffect(() => {
         // if (!accessToken) return
         axios.post('http://localhost:3100/userInfo/me', { "accessToken": accessToken })

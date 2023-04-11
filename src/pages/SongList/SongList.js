@@ -34,7 +34,7 @@ const SongList = () => {
         <>
             <header className="menu-header">
                 <h1 className="menu-header__title">
-                    { playlistName } 
+                    <Link className="menu-header__link" to='/' >{ playlistName }</Link>
                 </h1>
                 <div className="menu-header__logo">Logo</div>
             </header>
@@ -42,8 +42,8 @@ const SongList = () => {
                 <ul className="song-list">
                     { songs ? songs.map((i) => {
                         return <li className="song-list__item" >
-                            <Link className="song-list__link" to={`/player/${i.trackUri}`}>
-                                <div className="song-list__track">
+                            <Link className="song-list__link" to={`/player/${i.trackUri}/${id}`}>
+                                <div className="song-list__track" >
                                     <span className="song-list__song-name">{i.trackName}</span><span className="song-list__artist">{i.artistName}</span>
                                 </div>
                                 <span className="song-list__key">length/key</span>

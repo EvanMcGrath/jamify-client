@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={ !accessToken ? <LandingPage /> : <MainMenu  /> } />
           <Route path="/songlist/:id" element={<SongList />} />
-          <Route path="/player/:id" element={ <PlayerPage /> } />
+          <Route path="/player/:id/:playlistId" element={ <PlayerPage /> } />
         </Routes>
       </div>
     </BrowserRouter>
