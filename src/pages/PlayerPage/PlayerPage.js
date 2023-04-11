@@ -38,7 +38,7 @@ const PlayerPage = () => {
     return (
         <>
             <main className="player-page">
-            <h1><Link className="player-page__back" to={`/songlist/${playlistId}`}>&lt; &lt;</Link></h1>
+            <h1><Link className="player-page__back" to={`/songlist/${playlistId}`}>&lt;&lt;</Link></h1>
             <h1><Link className="player-page__logo" to="/">Jamify</Link></h1>
             <h2 className=""></h2>
                 <img className="player-page__album-art" src={trackInfo.trackArt} alt="Album/track artwork" />
