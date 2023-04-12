@@ -16,7 +16,7 @@ const SongList = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/playlist/${id}`)
+        axios.get(`http://localhost:3100/playlist/${id}`, { params: { accessToken }})
             .then((res) => {
                 // console.log(res.data)
                 setPlaylistName(res.data.playlistName)

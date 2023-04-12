@@ -13,24 +13,17 @@ const MainMenu = () => {
 
     useEffect(() => {
         // if (!accessToken) return
-        axios.post('http://localhost:3100/userInfo/me', { "accessToken": accessToken })
+        axios.get('http://localhost:3100/userInfo/me', { params: { accessToken }})
             .then((res) => {
                 setMyInfo(res.data[0].username)
+                setPlaylists(res.data[0].playlists)
             })
             .catch((err) => {
                 console.log(err)
             });
     }, [accessToken])
 
-    useEffect(() => {
-        axios.post('http://localhost:3100/playlist', { "accessToken": accessToken })
-            .then((res) => {
-                setPlaylists(res.data)
-            })
-            .catch((err) => {
-                console.log(err)
-            });
-    }, [myInfo])
+    
     
 
     return (
