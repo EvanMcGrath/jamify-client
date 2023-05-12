@@ -19,7 +19,7 @@ const PlaylistMenu = ({ playlists }) => {
                 const bgGradient = {background: gradient(`${Math.random()}`)}
                 return <>
                     <li className="playlist-list__item" style={bgGradient} key={key++}>
-                        <Link className="playlist-list__link" to={`/songlist/${list._id}`} >{list.playlistName}</Link>
+                        <Link className="playlist-list__link" to={`/songlist/${list._id}`}>{list.playlistName}</Link>
                     </li>
                 </>
             }) : null}

@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './PlayerPage.scss'
+import Logo from '../../assets/jamify.png'
 
 
 
@@ -39,7 +40,7 @@ const PlayerPage = () => {
         <>
             <main className="player-page">
             <h1><Link className="player-page__back" to={`/songlist/${playlistId}`}>&lt;&lt;</Link></h1>
-            <h1><Link className="player-page__logo" to="/">Jamify</Link></h1>
+            <h1><Link className="player-page__logo" to="/"><img className="player-page__img" src={Logo} /></Link></h1>
             <h2 className=""></h2>
                 <img className="player-page__album-art" src={trackInfo.trackArt} alt="Album/track artwork" />
                 

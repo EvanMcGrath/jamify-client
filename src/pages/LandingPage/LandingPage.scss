@@ -21,4 +21,13 @@
     bottom: 0;
     right: 0;
   }
+
+  &__logo-container {
+    width: 3rem;
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+  }
 }

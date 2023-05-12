@@ -15,8 +15,6 @@ function App() {
   //   setToken(accessToken);
   // }, [accessToken])
 
-  console.log(accessToken)
-
   ///// Get code from url 
   // const code = new URLSearchParams(window.location.search).get('code')
 

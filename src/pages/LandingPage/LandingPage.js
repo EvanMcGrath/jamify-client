@@ -1,5 +1,6 @@
 import './LandingPage.scss'
 import Login from '../../components/Login/Login'
+import Logo from '../../assets/jamify.png'
 
 const LandingPage = () => {
 
@@ -8,7 +9,9 @@ const LandingPage = () => {
             <header className="landing__header">Jamify</header>
                 <Login />
             <footer className="landing__footer">
-                <div>Logo</div>
+                <div className="landing__logo-container">
+                    <img className="landing__logo" src={Logo} />
+                </div>
             </footer>
         </main>
     )

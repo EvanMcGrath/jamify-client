@@ -23,7 +23,7 @@ const LOCALSTORAGE_VALUES = {
 export const logout = () => {
     /// Clear all localStorage items
     for (const property in LOCALSTORAGE_KEYS) {
-        window.localStorageRemoveItem(LOCALSTORAGE_KEYS[property])
+        window.localStorage.removeItem(LOCALSTORAGE_KEYS[property])
     }
 
     // Navigate to homepage
