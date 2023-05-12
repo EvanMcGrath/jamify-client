@@ -20,6 +20,7 @@ const SongList = () => {
             .then((res) => {
                 setPlaylistName(res.data.playlistName)
                 setSongs(res.data.tracks)
+                console.log(res.data)
             })
             .catch((err) => {
                 console.log(err)
