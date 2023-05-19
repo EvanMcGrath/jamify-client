@@ -100,10 +100,10 @@ GET /login/callback
 | :-------- | :------- | :-------------------------------- |
 | `query`      | `access token & song URI` | This endpoint calls the spotify API parses the response and sends the relevant song informaiton. |
 
-## Appendix
+## Mongo DB
 
-The database and subsequent logic in the back end are built around a local mongo database structure. 
-
+In order to successfully run the project you will have to have a local MongoDB connected to the jamify-server.
+For more information on how to set up a local MongoDB visit https://www.mongodb.com/docs/manual/introduction/.
 
 ## Authors
 
