@@ -8,8 +8,7 @@ import './PlayerPage.scss'
 
 const PlayerPage = () => {
 
-    const { id } = useParams();
-    const { playlistId } = useParams();
+    const { id, playlistId } = useParams();
 
     const [trackInfo, setTrackInfo] = useState()
 

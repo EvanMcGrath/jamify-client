@@ -1,6 +1,5 @@
 import React from 'react'
 import './PlaylistMenu.scss'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import gradient from 'random-gradient'
 
