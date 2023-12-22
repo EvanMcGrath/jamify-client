@@ -1,16 +1,11 @@
 import React from 'react'
 import './PlaylistMenu.scss'
 import { useEffect } from 'react'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { accessToken } from '../../utils/spotify'
 import gradient from 'random-gradient'
 
 const PlaylistMenu = ({ playlists }) => {
-    
     let key = 0
-
-    // console.log(playlists)
     
     return (
         <>

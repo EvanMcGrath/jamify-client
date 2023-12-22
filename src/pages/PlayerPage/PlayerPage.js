@@ -6,14 +6,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './PlayerPage.scss'
 
-
-
 const PlayerPage = () => {
 
     const { id } = useParams();
     const { playlistId } = useParams();
-
-    console.log(playlistId)
 
     const [trackInfo, setTrackInfo] = useState()
 

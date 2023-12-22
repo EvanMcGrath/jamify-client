@@ -7,8 +7,6 @@ import PlaylistMenu from "../PlaylistMenu/PlaylistMenu";
 
 const Dashboard = ({ myInfo, setMyInfo, setPlaylists, playlists }) => {
 
-    // const accessToken = useAuth(code)
-
     useEffect(() => {
         if (!accessToken) return
         axios.post('http://localhost:3100/userInfo/me', { "access_token": accessToken })

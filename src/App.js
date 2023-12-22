@@ -2,26 +2,10 @@ import MainMenu from './pages/MainMenu/MainMenu';
 import SongList from './pages/SongList/SongList'
 import LandingPage from './pages/LandingPage/LandingPage';
 import PlayerPage from './pages/PlayerPage/PlayerPage'
-import useAuth from './utils/useAuth'
-import { accessToken, logout } from './utils/spotify'
-import { useEffect, useState } from 'react'
+import { accessToken } from './utils/spotify'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-
-  // const [ token, setToken ] = useState(null)
-
-  // useEffect(() => {
-  //   setToken(accessToken);
-  // }, [accessToken])
-
-  console.log(accessToken)
-
-  ///// Get code from url 
-  // const code = new URLSearchParams(window.location.search).get('code')
-
-  // const accessToken = useAuth(code)  
-
   return (
     <BrowserRouter>
       <div className="App">

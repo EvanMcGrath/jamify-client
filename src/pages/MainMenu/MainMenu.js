@@ -1,4 +1,3 @@
-import Dashboard from '../../components/Dashboard/Dashboard'
 import { accessToken } from '../../utils/spotify'
 import './MainMenu.scss'
 import { useState, useEffect } from 'react'
@@ -12,7 +11,6 @@ const MainMenu = () => {
 
 
     useEffect(() => {
-        // if (!accessToken) return
         axios.get('http://localhost:3100/userInfo/me', { params: { accessToken }})
             .then((res) => {
                 setMyInfo(res.data[0].username)
@@ -22,8 +20,6 @@ const MainMenu = () => {
                 console.log(err)
             });
     }, [accessToken])
-
-    
     
 
     return (
@@ -36,8 +32,6 @@ const MainMenu = () => {
             </header>
             
             <PlaylistMenu playlists={playlists} />
-
-            {/* <Dashboard setMyInfo={setMyInfo} setPlaylists={b} /> */}
         </>
     )
 }
