@@ -1,34 +1,25 @@
 import React, { useEffect, useState } from "react";
 import './SongList.scss'
 import { Link, useParams } from "react-router-dom";
-import SpotifyPlayer from  'react-spotify-web-playback'
-import { accessToken, logout } from '../../utils/spotify'
+import { accessToken } from '../../utils/spotify'
 import axios from "axios";
 
 const SongList = () => {
-
-    // console.log(token)
-
     const { id } = useParams();
 
     const [ songs, setSongs ] = useState('')
     const [ playlistName, setPlaylistName ] = useState('')
 
-
     useEffect(() => {
         axios.get(`http://localhost:3100/playlist/${id}`, { params: { accessToken }})
             .then((res) => {
-                // console.log(res.data)
                 setPlaylistName(res.data.playlistName)
                 setSongs(res.data.tracks)
-                
             })
             .catch((err) => {
                 console.log(err)
             })
     }, [])
-
-    // console.log(songs)
 
     return (
         <>

@@ -1,13 +1,9 @@
-import useAuth from "../../utils/useAuth";
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { accessToken, logout } from '../../utils/spotify'
-import SpotifyPlayer from 'react-spotify-web-playback'
+import { accessToken } from '../../utils/spotify'
 import PlaylistMenu from "../PlaylistMenu/PlaylistMenu";
 
 const Dashboard = ({ myInfo, setMyInfo, setPlaylists, playlists }) => {
-
-    // const accessToken = useAuth(code)
 
     useEffect(() => {
         if (!accessToken) return
